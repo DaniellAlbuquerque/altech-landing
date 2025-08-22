@@ -257,4 +257,62 @@
     height: 22px;
   }
   
+  /* ===== Responsividade ===== */
+
+/* Telas até 1024px (tablets e notebooks pequenos) */
+@media (max-width: 1024px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Telas até 768px (tablets em pé e celulares grandes) */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 40px 20px;
+    height: auto; /* deixa o conteúdo crescer conforme precisa */
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .services {
+    grid-template-columns: 1fr; /* serviços em 1 coluna */
+  }
+  form {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .carousel img,
+  .carousel2 img {
+    max-width: 90%;
+    height: auto;
+  }
+}
+
+/* Telas até 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .hero a {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+  .card {
+    padding: 20px;
+  }
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+
   
