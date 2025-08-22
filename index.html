@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Altech - Serviços de Informática</title>
+  <link rel="icon" href="/img/favicon.png" type="image/png" width="300px" heigth="300px">
+  <meta name="description" content="Assistência técnica em informática. Manutenção de notebooks e PCs, upgrades, suporte técnico e muito mais.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+    <img src="/img/LogoAltech.png" alt="Logo Altech" class="logo">
+      <h2>Soluções em Informática</h2>
+      <p>Assistência técnica especializada em notebooks e PCs. Atendimento rápido e confiável.</p>
+      <a href="#contato">Solicitar Orçamento</a>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="section">
+    <h3>Nossos Serviços</h3>
+    <div class="services">
+      <div class="card">
+        <h4>Manutenção de Notebooks</h4>
+        <p>Reparos, limpeza, upgrades e otimização de desempenho.</p>
+      </div>
+      <div class="card">
+        <h4>Formatação e Instalação</h4>
+        <p>Instalação de Windows, drivers e softwares essenciais.</p>
+      </div>
+      <div class="card">
+        <h4>Suporte Técnico</h4>
+        <p>Atendimento remoto e presencial para resolver seus problemas.</p>
+      </div>
+    </div>
+  </section>
+   <!-- Depoimentos -->
+<!-- Depoimentos com Avaliações -->
+<section class="section" id="avaliacoes">
+    <h3>Avaliações dos Clientes</h3>
+    <div class="carousel2">
+      <div class="carousel2-item active">
+        <div class="review-box">
+          <p>"Serviço excelente! Meu notebook ficou novo."</p>
+          <div class="stars">★★★★★</div>
+          <span>- João</span>
+        </div>
+      </div>
+      <div class="carousel2-item">
+        <div class="review-box">
+          <p>"Mano, boa tarde !
+            Passando pra te falar que o pc ficou top demais!
+            Eu ficava horas pra fazer trabalhos simples pq travava tudo, agora tudo flui e eu estou produzindo muito mais, super recomendo seu trabalho brother."</p>
+          <div class="stars">★★★★★</div>
+          <span>- Vinícius</span>
+        </div>
+      </div>
+      <div class="carousel2-item">
+        <div class="review-box">
+          <p>"Atendimento rápido e de qualidade. Recomendo a Altech!"</p>
+          <div class="stars">★★★★☆</div>
+          <span>- Maria Oliveira</span>
+        </div>
+      </div>
+      <div class="carousel2-item">
+        <div class="review-box">
+          <p>"Boa tarde! Estou passando pra agradecer pelo trabalho com meu notebook, superou as expectativas!! ele estava muito lento e pouca memória, não conseguia mais utilizar. Parabéns pela excelencia."</p>
+          <div class="stars">★★★★★</div>
+          <span>- Luiza</span>
+        </div>
+      </div>
+    </div>
+    <div class="carousel2-controls">
+      <button class="prev2">❮</button>
+      <button class="next2">❯</button>
+    </div>
+  </section> 
+  <!-- Contato -->
+  <section class="section" id="contato">
+    <h3>Fale Conosco</h3>
+    <!---- Formulário-->
+    <form action="https://formsubmit.co/altech.sjc@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <input type="tel" name="phone" placeholder="Telefone/WhatsApp" required>
+        <textarea name="message" rows="5" placeholder="Descreva seu problema"></textarea>
+        <button type="submit">Enviar Mensagem</button>
+      
+        <!---- Configurações extras --> 
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html"> 
+        <input type="hidden" name="_captcha" value="false">
+      </form>
+    
+  
+    
+  </section>
+  <!-- Botão WhatsApp -->
+<a href="https://wa.me/5512996427011?text=Olá! Gostaria de um orçamento para meu computador." class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+  
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Altech Technology - Todos os direitos reservados</p>
+    <p>📍 Jardim Satélite, São José dos Campos - SP | 📞 <a href="tel:+5512996427011">(12) 99642-7011</a></p>
+    <p>
+        <a href="https://instagram.com/_altech_" target="_blank" class="instagram-link">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="instagram-icon">
+          Nos siga no Instagram
+        </a>
+      </p>
+      
+  </footer>
+  <script>
+    const items2 = document.querySelectorAll('.carousel2-item');
+    let current2 = 0;
+  
+    document.querySelector('.next2').addEventListener('click', () => {
+      items2[current2].classList.remove('active');
+      current2 = (current2 + 1) % items2.length;
+      items2[current2].classList.add('active');
+    });
+  
+    document.querySelector('.prev2').addEventListener('click', () => {
+      items2[current2].classList.remove('active');
+      current2 = (current2 - 1 + items2.length) % items2.length;
+      items2[current2].classList.add('active');
+    });
+  
+    // autoplay a cada 5s
+    setInterval(() => {
+      items2[current2].classList.remove('active');
+      current2 = (current2 + 1) % items2.length;
+      items2[current2].classList.add('active');
+    }, 5000);
+  </script>
+  
+  
+</body>
+</html>
